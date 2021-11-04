@@ -6,6 +6,10 @@ View memory shared between containers:
 ```sh
 $ sudo docker system df -v
 ```
+Stop all containers:
+```sh
+$ sudo docker kill $(sudo docker ps -q)
+```
 Delete all stopped containers:
 ```sh
 $ docker container prune
