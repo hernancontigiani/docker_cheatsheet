@@ -6,6 +6,10 @@ View memory shared between containers:
 ```sh
 $ sudo docker system df -v
 ```
+Delete all stopped containers:
+```sh
+$ docker container prune
+```
 Delete old image without tag (unstage):
 ```sh
 $ sudo docker rmi $(sudo docker images -f "dangling=true" -q) --force
