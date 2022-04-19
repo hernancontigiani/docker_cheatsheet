@@ -22,3 +22,7 @@ Delete all images and containers not in use:
 ```sh
 $ sudo docker system prune -a
 ```
+Delete all images and containers without use in the last 6 month:
+```sh
+$ sudo docker system prune -a --filter "until=4320h" 
+```
