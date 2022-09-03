@@ -18,6 +18,10 @@ Delete old image without tag (unstage):
 ```sh
 $ sudo docker rmi $(sudo docker images -f "dangling=true" -q) --force
 ```
+Delete all image that start with a specific imagename:
+```sh
+$ docker rmi $(docker images | grep 'imagename') --force
+```
 Delete all images and containers not in use:
 ```sh
 $ sudo docker system prune -a
