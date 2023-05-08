@@ -14,6 +14,10 @@ Delete all stopped containers:
 ```sh
 $ docker container prune
 ```
+Delete all containers (force):
+```sh
+$ sudo docker rm $(sudo docker ps -a -q) --force
+```
 Delete old image without tag (unstage):
 ```sh
 $ sudo docker rmi $(sudo docker images -f "dangling=true" -q) --force
