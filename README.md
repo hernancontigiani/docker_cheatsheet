@@ -22,6 +22,10 @@ Delete old image without tag (unstage):
 ```sh
 $ sudo docker rmi $(sudo docker images -f "dangling=true" -q) --force
 ```
+Delete old volumens without tag (dangling):
+```sh
+$ sudo docker volume rm $(docker volume ls -qf dangling=true)
+```
 Delete all image that start with a specific imagename:
 ```sh
 $ docker rmi $(docker images | grep 'imagename') --force
